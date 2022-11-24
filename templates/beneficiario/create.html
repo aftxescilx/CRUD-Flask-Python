@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+<div class="card">
+    <div class="card-header">
+        Crear beneficiario
+    </div>
+    <div class="card-body">
+        <form method="post" action="/store" enctype="multipart/form-data">
+
+            Nombre:
+            <input type="text" name="txtNombre" id="txtNombre">
+            <br>
+            RFC:
+            <input type="text" name="txtRfc" id="txtRfc">
+            <br>
+            <br>
+            <input type="submit" value="Agregar">    
+            <div class="invalid-feedback">
+                Se requiere un dato válido.
+            </div>
+        </form>
+    </div>
+</div>
+{% include 'footer.html' %}

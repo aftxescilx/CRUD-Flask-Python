@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+{% for beneficiario in beneficiario %}
+<div class="card">
+    <div class="card-header">
+        Editar beneficiario
+    </div>
+    <div class="card-body">
+        <form method="post" action="/update" enctype="multipart/form-data">
+            
+            ID:
+            <input type="text" value="{{ beneficiario[0] }}"name="txtId" id="txtId">
+            <br>
+            Nombre:
+            <input type="text" value="{{ beneficiario[1] }}"name="txtNombre" id="txtNombre">
+            <br>
+            RFC:
+            <input type="text" value="{{ beneficiario[2] }}" name="txtRfc" id="txtRfc">
+            <br>
+            <br>
+            <input type="submit" value="Editar">    
+
+        </form>
+    </div>
+</div>
+
+{% endfor %}
+{% include 'footer.html' %}

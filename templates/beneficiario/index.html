@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+<div class="card">
+    <div class="card-header">
+        Lista de Beneficiarios |  
+        <a name="" id="" class="" href="/create" role="button">Añadir</a>
+    </div>
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>RFC</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+                
+            {% for beneficiario in beneficiario %}
+            <tr>
+                <td>{{ beneficiario[0] }}</td>
+                <td>{{ beneficiario[1] }}</td>
+                <td>{{ beneficiario[2] }}</td>
+                <td> <a href="/edit/{{beneficiario[0]}}">Editar</a> |
+                    
+                <a href="/destroy/{{beneficiario[0]}}">Eliminar</a>
+                </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+</div>
+{% include 'footer.html' %}
